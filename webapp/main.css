@@ -8,4 +8,32 @@
     background: #eee;
     width: 70%;
     margin: 0 auto;
+    padding: 15px;
+}
+
+.dl-horizontal {
+    *zoom: 1;
+}
+
+.dl-horizontal:before,
+.dl-horizontal:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.dl-horizontal:after {
+    clear: both;
+}
+
+.dl-horizontal dt {
+    float: left;
+    font-weight: bold;
+    padding-right: 10px;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

@@ -1,1 +1,1 @@
-<?= $this->widget('\Micro\Widget\DetailViewWidget', ['data'=>$model]);
+<?= $this->widget('\Micro\Widget\DetailViewWidget', ['data'=>$model, 'attributes'=>['class'=>'dl-horizontal']]);
