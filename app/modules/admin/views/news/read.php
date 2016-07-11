@@ -1,0 +1,1 @@
+<?= $this->widget('\Micro\Widget\DetailViewWidget', ['data'=>$model]);

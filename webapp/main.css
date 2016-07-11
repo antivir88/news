@@ -1,0 +1,11 @@
+.data-summ {
+    text-align: right;
+}
+.data-empty {
+    text-align: center;
+}
+.container {
+    background: #eee;
+    width: 70%;
+    margin: 0 auto;
+}
