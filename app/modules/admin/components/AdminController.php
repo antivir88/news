@@ -3,6 +3,7 @@
 namespace App\Modules\Admin\Components;
 
 use App\Components\Controller;
+use Micro\Db\ConnectionInjector;
 use Micro\Web\UserInjector;
 
 class AdminController extends Controller
@@ -17,7 +18,6 @@ class AdminController extends Controller
     public function __construct($modules = '')
     {
         parent::__construct($modules);
-
         $user = (new UserInjector)->build();
 
         if ($user->isGuest() || !$user->check($this->permission)) {

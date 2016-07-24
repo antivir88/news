@@ -42,7 +42,7 @@ class Categories extends Model
 
     public function getCategories()
     {
-        $db = (new ConnectionInjector)->build();
+        $db = (new ConnectionInjector)->build()->getDriver();
 
         $query = new Query($db);
         $query->select = $db->getDriverType() === 'pgsql' ? '"id" as "value", "name" as "text"' : '`id` as `value`, `name` as `text`';

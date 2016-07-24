@@ -16,7 +16,7 @@ class DefaultController extends Controller
     {
         $page = (new RequestInjector)->build()->query('list', FILTER_VALIDATE_INT, ['options' => ['default' => 0]]);
 
-        $sql = new Query((new ConnectionInjector)->build());
+        $sql = new Query((new ConnectionInjector)->build()->getDriver());
         $sql->objectName = '\App\Models\News';
         $sql->table = News::$tableName;
         $sql->order = 'created_at DESC';

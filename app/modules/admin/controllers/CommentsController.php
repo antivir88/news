@@ -15,7 +15,7 @@ class CommentsController extends AdminController
 {
     public function actionIndex()
     {
-        $query = new Query((new ConnectionInjector)->build());
+        $query = new Query((new ConnectionInjector)->build()->getDriver());
         $query->objectName = '\App\Models\Comments';
 
         $view = new PhpView;

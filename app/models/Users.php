@@ -41,7 +41,7 @@ class Users extends Model
 
     public function getUsers()
     {
-        $db = (new ConnectionInjector)->build();
+        $db = (new ConnectionInjector)->build()->getDriver();
 
         $query = new Query($db);
         $query->select = $db->getDriverType() === 'pgsql' ? '"id" as "value", "login" as "text"' : '`id` as `value`, `login` as `text`';
